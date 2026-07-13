@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Express - Produtos</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Office Express</h1>
+        <nav>
+            <ul>
+                <li><a href="./paginaprincipal.html">Produtos</a></li>
+                <li><a href="./index.html">Login</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Catálogo de Produtos</h2>
+        <div class="product-grid">
+            <div class="product-card" id="produto-mesa">
+                <img src="img/Mesa.webp" alt="Mesa de Canto">
+                <h3>Mesa De Canto Para Escritório</h3>
+                <p>R$ 350,00</p>
+                <button onclick="abrirProduto('produto-mesa')">Ver detalhes</button>
+            </div>
+
+            <div class="product-card" id="produto-cadeira">
+                <img src="img/Cadeira.webp" alt="Cadeira Ergonômica">
+                <h3>Cadeira Ergonômica</h3>
+                <p>R$ 150,00</p>
+                <button onclick="abrirProduto('produto-cadeira')">Ver detalhes</button>
+            </div>
+
+            <div class="product-card" id="produto-suporte">
+                <img src="img/Suporte.webp" alt="Suporte">
+                <h3>Suporte Para Notebook</h3>
+                <p>R$ 20,00</p>
+                <button onclick="abrirProduto('produto-suporte')">Ver detalhes</button>
+            </div>
+
+            <div class="product-card" id="produto-luminaria">
+                <img src="img/Luminaria.webp" alt="Luminária">
+                <h3>Luminária de mesa</h3>
+                <p>R$ 80,00</p>
+                <button onclick="abrirProduto('produto-luminaria')">Ver detalhes</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Office Express - Todos os direitos reservados</p>
+    </footer>
+<script src="produtos.js"></script>
+</body>
+
+</html>

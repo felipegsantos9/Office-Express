@@ -1,0 +1,136 @@
+/* Layout geral */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F5F5F5;
+  margin: 0;
+  color: #273E47;
+}
+
+/* Header com barra de pesquisa */
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: #273E47;
+  padding: 15px;
+  gap: 10px;
+}
+
+.barra-pesquisa input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+.barra-pesquisa button {
+  background-color: #D8973C;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.barra-pesquisa button:hover {
+  background-color: #fff;
+  color: #273E47;
+}
+
+/* Botão voltar no header */
+.btn-voltar {
+  background-color: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-voltar:hover {
+  background-color: #666;
+}
+
+/* Container do produto */
+.produto-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  gap: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(39, 62, 71, 0.15);
+}
+
+.produto-imagem img {
+  width: 450px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+.produto-info {
+  flex: 1;
+}
+
+.produto-info h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #273E47;
+}
+
+.produto-info .preco {
+  font-size: 2em;
+  font-weight: bold;
+  color: #D8973C;
+  margin: 20px 0;
+}
+
+.produto-info p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* Botões principais */
+.botoes {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.botoes button {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar {
+  background-color: #D8973C;
+  color: #fff;
+}
+
+.btn-comprar:hover {
+  background-color: #273E47;
+}
+
+.btn-carrinho {
+  background-color: #D8973C;
+  color: #fff;
+}
+
+.btn-carrinho:hover {
+  background-color: #273E47;
+}

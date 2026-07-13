@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout geral */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F5F5F5;
+  margin: 0;
+  color: #273E47;
+}
+
+/* Cabeçalho fixo */
+header {
+  background-color: #273E47;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #D8973C;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #D8973C;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 40px 60px;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #273E47;
+}
+
+/* Grade de produtos fixa */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas fixas */
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1.5px solid #273E47;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(39, 62, 71, 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  color: #D8973C;
+}
+
+.product-card p {
+  font-weight: bold;
+  margin: 5px 0 15px;
+}
+
+.product-card button {
+  background-color: #273E47;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #D8973C;
+}
+
+/* Rodapé */
+footer {
+  background-color: #273E47;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="produto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="barra-pesquisa">
+    <button class="btn-voltar" onclick="window.location.href='./paginaprincipal.html'">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <input type="text" placeholder="Buscar produtos..." id="searchInput">
+    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </header>
+
+  <!-- Container do produto -->
+  <div id="produto-detalhes"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const produtoId = params.get("id");
+
+    const produtos = {
+      "produto-mesa": {
+        nome: "Mesa de Canto Para Escritório",
+        preco: "R$ 350,00",
+        descricao: "Mesa de canto para escritorio feita em MDF.",
+        imagem: "img/Mesa.webp"
+      },
+      "produto-cadeira": {
+        nome: "Cadeira Ergonômica",
+        preco: "R$ 150,00",
+        descricao: "Cadeira com apoio lombar e regulagem de altura.",
+        imagem: "img/Cadeira.webp"
+      },
+      "produto-suporte": {
+        nome: "Suporte Para Notebook",
+        preco: "R$ 20,00",
+        descricao: "Suporte ajustável para notebook, ideal para uso em casa ou escritório.",
+        imagem: "img/Suporte.webp"
+      },
+      "produto-luminaria": {
+        nome: "Luminária de mesa",
+        preco: "R$ 80,00",
+        descricao: "Luminária de mesa com ajuste de brilho.",
+        imagem: "img/Luminaria.webp"
+      }
+    };
+
+    const produto = produtos[produtoId];
+    const container = document.getElementById("produto-detalhes");
+
+    if (produto) {
+      container.innerHTML = `
+        <div class="produto-container">
+          <div class="produto-imagem">
+            <img src="${produto.imagem}" alt="${produto.nome}">
+          </div>
+          <div class="produto-info">
+            <h1>${produto.nome}</h1>
+            <p class="preco">${produto.preco}</p>
+            <p>${produto.descricao}</p>
+            <div class="botoes">
+              <button class="btn-comprar">Comprar agora</button>
+              <button class="btn-carrinho">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      container.innerHTML = "<p>Produto não encontrado.</p>";
+    }
+
+    // Busca simples
+    document.getElementById("searchBtn").addEventListener("click", () => {
+      const termo = document.getElementById("searchInput").value.toLowerCase();
+      if (termo.includes("mesa")) {
+        window.location.href = "produto.html?id=produto-mesa";
+      } else if (termo.includes("cadeira")) {
+        window.location.href = "produto.html?id=produto-cadeira";
+      } else if (termo.includes("estante")) {
+        window.location.href = "produto.html?id=produto-estante";
+      } else {
+        alert("Produto não encontrado!");
+      }
+    });
+  </script>
+</body>
+
+</html>
