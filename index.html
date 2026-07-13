@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Office Express</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1><img src="img/Logo.png" alt="Logo do Office Express" class="logo"> Office Express</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Senha" required>
+            </div>
+
+            <button type="submit" class="btn-login"><i class="fa-solid fa-right-to-bracket"></i>
+                Entrar</button>
+            <p class="error" id="errorMsg"></p>
+        </form>
+
+        <div class="back-signup">
+            <button onclick="window.location.href='./cadastro.html'" class="btn-signup">
+                <i class="fa-solid fa-user-plus"></i>
+                Cadastre-se
+            </button>
+        </div>
+        <p class="error" id="errorMsg"></p>
+        </form>
+
+        <div class="social-login">
+            <p>Ou entre com:</p>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
